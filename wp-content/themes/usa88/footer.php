@@ -1,9 +1,20 @@
+</main>
     <footer>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
-          <div class="col-md-3">aside</div>
-          <div class="col-md-6">asd</div>
-          <div class="col-md-3">asd</div>
+          <div class="col-md-2 text-center">
+            <a class="navbar-brand" href="#">
+              <img src="<?= get_template_directory_uri(); ?>/assets/img/logo2.gif" alt="<?= get_bloginfo( 'name' ) ?>">
+            </a>
+          </div>
+          <div class="col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aperiam distinctio doloremque unde dolor, rem, eos minima iure blanditiis. Nisi harum tenetur voluptatem laudantium, ab et ex enim quasi reprehenderit, alias nesciunt officiis debitis id necessitatibus eveniet saepe vero ad.</p></div>
+          <div class="col-md-2">
+            <h4>CONTACT US:</h4>
+            <ul>
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:027443467">(02) 744 3467</a></li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mail:usa88@gmail.com">usa88@gmail.com</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
