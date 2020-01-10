@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 <section class="category-area">
-  <div class="heading-2">
-    <h2 class="title-h2">BROWSE BY CATEGORY</h2>
-  </div>
   <div class="container">
-    <p class="title-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium excepturi nobis voluptate quam hic et maxime ad, cumque vero saepe a sint neque, maiores fugiat necessitatibus tenetur modi facilis repellendus enim natus esse quo, nulla!</p>
     <div class="row category-list">
       <?php
         $categories = get_field('field_5e179bafb8827',10);
