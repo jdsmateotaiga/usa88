@@ -23,7 +23,15 @@ section { padding-top: 4em }
 header { -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20);
 -moz-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20);
 box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20); background-color: #fff; width: 100%; position: absolute; top: 0; z-index: 99 }
-
+.navbar-toggle { margin-top: 17px }
+.navbar-toggle .icon-bar { background-color: #0d5681; height: 4px }
+.navbar-toggle .icon-bar:first-child { margin-top: 5px; -webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg) }
+.navbar-toggle .icon-bar:last-child { margin-top: -4px; -webkit-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg) }
+.navbar-toggle .icon-bar:nth-child(2) { display: none }
+.navbar-toggle.collapsed .icon-bar { transform: none }
+.navbar-toggle.collapsed .icon-bar:nth-child(2) { display: block }
+.navbar-toggle.collapsed .icon-bar:first-child { margin-top: 0 }
+.navbar-toggle.collapsed .icon-bar:last-child { margin-top: 4px }
 .navbar-brand { height: auto; padding: 10px; display: block  }
 .navbar-brand img { width: 100%; height: auto }
 .navbar { margin-bottom: 0; border: none  }
@@ -38,22 +46,29 @@ header.fixed #global-navigation ul li a { padding: 20px 20px;  }
 header.fixed .navbar-brand { padding: 5px }
 header.fixed .navbar-brand img { width: 88% }
 header.fixed .nav li { padding: 0 }
+header.fixed .navbar-toggle { margin-top: 10px }
 
 .hero-area { padding: 0 }
 #slider .slider-item { height: 700px; background-repeat: no-repeat; background-size: cover; background-position: center; position: relative }
-#slider .slider-text { position: absolute;z-index: 2; top: 50%; width: 100%; padding: 0 20px; text-align: center; -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%) }
+#slider .slider-content { padding-top: 8em; width: 50% }
+#slider .slider-content h1,
+#slider .slider-content p { color: #fff }
+#slider .slider-content h1 { font-size: 50px }
+#slider .slider-content p { font-size: 20px }
 #slider .owl-next { right: 15px; z-index: 2 }
 #slider .owl-prev { left: 15px; z-index: 2 }
 
 .category-list .cat-item > div { margin-bottom: 30px; height: 300px; background-size: cover }
 .cat-bg { position: relative }
 .cat-bg a,
-.cat-bg:before { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; content: '' }
+.cat-bg:before { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; content: '';
+-webkit-transition: all ease .3s;-o-transition: all ease .3s;transition: all ease .3s }
 .cat-bg.red:before { background-color: rgba(213,30,74,.70) }
 .cat-bg.blue:before { background-color: rgba(13,86,129,.70) }
+.cat-bg:hover:before { opacity: .2 }
 .cat-bg .cat-title { position: absolute; z-index: 2; top: 50%; -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-        transform: translateY(-50%); margin: 0; width: 100%; text-align: center; color: #fff; letter-spacing: 2px }
+        transform: translateY(-50%); margin: 0; width: 100%; text-align: center; color: #fff; letter-spacing: 2px; text-shadow: 1px 0px 2px rgba(150, 150, 150, 1) }
 
 .story-video { max-width: 700px; margin: 0 auto 3em }
 .contact-area .col-md-5 { background-color: #d51e4a }
@@ -88,6 +103,40 @@ footer h4 { margin: 0 0 5px }
 footer ul { padding-left: 0 }
 footer ul li { list-style-type: none; font-weight: 700 }
 footer ul li a { margin-left: 5px; color: #fff }
+footer .footer-logo img { width: 100%; height: auto }
+
+@media only screen and (max-width: 1200px) {
+
+  #global-navigation ul li a { padding: 25px 15px }
+  .navbar .container { width: 100% }
+}
+
+@media (max-width: 991px) {
+
+  .navbar-header { float: none }
+  .navbar-left,.navbar-right { float: none !important }
+  .navbar-toggle { display: block }
+  .navbar-collapse.collapse { display: none!important }
+  .navbar-nav { float: none!important;}
+  .navbar-nav>li { float: none }
+
+  .collapse.in{ display:block !important }
+  .navbar-nav li { width: 100%; padding: 0 }
+  header.fixed #global-navigation ul li a,
+  #global-navigation ul li a { padding: 12px 20px }
+  .navbar-nav { margin: 0 -15px }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #slider .slider-content { width: 100% }
+
+  footer { padding: 2em 0 }
+  .footer-item { margin-bottom: 25px }
+  .footer-contact { text-align: center }
+  .footer-logo img { width: 180px }
+}
 
 @keyframes phone-icon {
   0% { transform: translate3d(0em, 0, 0) }

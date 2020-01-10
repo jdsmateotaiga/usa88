@@ -8,18 +8,20 @@
 <section class="hero-area">
   <div class="slider owl-carousel" id="slider">
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner1.jpeg');">
-      <div class="slider-text">
-         <div class="slider-content">
-           <p><b>Welcome to the changing face of Davao</b></p>
-         </div>
-      </div>
+   <div class="container">
+     <div class="slider-content animated fadeInLeft">
+       <h1>POWERING BEYOND<br>PERFORMANCE</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
+     </div>
+   </div>
   </div>
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner2.jpg');">
-      <div class="slider-text">
-         <div class="slider-content">
-           <p><b>Welcome to the changing face of Davao</b></p>
-         </div>
+    <div class="container">
+      <div class="slider-content">
+        <h1>POWERING BEYOND<br>PERFORMANCE</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
       </div>
+    </div>
   </div>
 </div>
 </section>

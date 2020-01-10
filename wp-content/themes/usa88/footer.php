@@ -2,13 +2,15 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-2 text-center">
-            <a class="navbar-brand" href="#">
-              <img src="<?= get_template_directory_uri(); ?>/assets/img/logo2.gif" alt="<?= get_bloginfo( 'name' ) ?>">
-            </a>
+          <div class="footer-item col-md-2 text-center">
+            <p class="footer-logo">
+              <a href="#">
+                <img src="<?= get_template_directory_uri(); ?>/assets/img/logo2.gif" alt="<?= get_bloginfo( 'name' ) ?>">
+              </a>
+            </p>
           </div>
-          <div class="col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aperiam distinctio doloremque unde dolor, rem, eos minima iure blanditiis. Nisi harum tenetur voluptatem laudantium, ab et ex enim quasi reprehenderit, alias nesciunt officiis debitis id necessitatibus eveniet saepe vero ad.</p></div>
-          <div class="col-md-2">
+          <div class="footer-item col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aperiam distinctio doloremque unde dolor, rem, eos minima iure blanditiis. Nisi harum tenetur voluptatem laudantium, ab et ex enim quasi reprehenderit, alias nesciunt officiis debitis id necessitatibus eveniet saepe vero ad.</p></div>
+          <div class="footer-item footer-contact col-md-2">
             <h4>CONTACT US:</h4>
             <ul>
               <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:027443467">(02) 744 3467</a></li>
@@ -26,16 +28,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('#slider').owlCarousel({
+        var owl = $('#slider');
+        owl.owlCarousel({
             loop: true,
             items: 1,
-            nav: true,
-            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            nav: false,
+            // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
             autoplay:true,
             autoplayTimeout:8000,
             autoplayHoverPause:true,
             animateOut: 'fadeOut',
             dots: false,
+        });
+        owl.on('changed.owl.carousel', function(event) {
+            var item = event.item.index - 2;     // Position of the current item
+            $('#slider .slider-content').removeClass('animated fadeInLeft');
+            $('.owl-item').not('.cloned').eq(item).find('.slider-content').addClass('animated fadeInLeft');
         });
         $(window).scroll(function(){
           nav_scroll();
