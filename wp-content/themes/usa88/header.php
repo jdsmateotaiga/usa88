@@ -27,7 +27,7 @@
           </div>
           <div class="collapse navbar-collapse" id="global-navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">HOME</a></li>
+              <li class="active"><a href="/">HOME</a></li>
               <li><a href="/products">PRODUCTS</a></li>
               <li><a href="#">SERVICES</a></li>
               <li><a href="#">ABOUT US</a></li>
