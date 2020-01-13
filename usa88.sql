@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 04:50 PM
+-- Generation Time: Jan 13, 2020 at 01:10 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.2.7
 
@@ -350,7 +350,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (74, 32, '_edit_last', '1'),
 (75, 32, '_edit_lock', '1578842969:1'),
 (76, 33, '_edit_last', '1'),
-(77, 33, '_edit_lock', '1578843264:1'),
+(77, 33, '_edit_lock', '1578844254:1'),
 (78, 39, '_edit_last', '1'),
 (79, 39, '_edit_lock', '1578842865:1'),
 (80, 32, 'product_images', '1'),
@@ -887,7 +887,7 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=301;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=292;
 
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
