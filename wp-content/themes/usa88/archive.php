@@ -34,10 +34,7 @@ if( !$cat_image ) {
             <?php
                 foreach($child_categories as $item) {
                     $opposite_color_code = (get_field('category_color_code', 'category_'.$item->term_id) == 'blue') ? 'red' : 'blue';
-
                     if($item->count == 0) {
-
-                        
             ?>
                         <div class="col-md-<?= $col ?>  cat-item">
                             <div class="cat-bg <?= $opposite_color_code ?>" style="background-image: url('<?= $cat_image ?>')">

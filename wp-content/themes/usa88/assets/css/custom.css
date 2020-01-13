@@ -1,10 +1,36 @@
 /* Commion
   d64862 -pink
 */
-body a, * { color: #333; font-size: 16px }
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir'), url('../fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir'), url('../fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir'), url('../fonts/AvenirNextLTPro-BoldIt.otf') format('opentype');
+}
+
+body {
+  font-family: 'Avenir', serif;
+}
+
+body a, * { color: #2e2e2e; font-size: 16px }
  * { transition: all ease-in-out .2s }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: 1px }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: 1px; font-family: 'Avenir Bold', serif; }
 h1, h2, h3 { text-transform: uppercase }
 
 main { margin-top: 78px }
@@ -50,8 +76,8 @@ section { padding-top: 4em }
 .heading-3.blue:before { border-color: transparent #5fc2e1  transparent transparent }
 .heading-3.blue:after { border-color: #5fc2e1 transparent  transparent transparent }
 
-
-.title-description { margin: 0 auto 3em; max-width: 900px; text-align: center }
+.content p { line-height: 1.8 }
+.title-description { font-family: 'Avenir Bold Italic', serif; margin: 0 auto 3em; max-width: 900px; text-align: center }
 
 /* Navigation */
 header { -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20);
@@ -71,8 +97,9 @@ box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20); background-color: #fff; width: 100
 .navbar { margin-bottom: 0; border: none  }
 .nav li { display: inline-block; vertical-align: middle; padding: 5px 0; float: none }
 #global-navigation ul li a { font-weight: 700; padding: 25px 20px; letter-spacing: 1.5px; line-height: 1; border-bottom: 3px solid transparent }
-#global-navigation ul li a:hover, #global-navigation ul li a:focus, #global-navigation ul li a:active,
-#global-navigation ul li.active a { background-color: #d64862; color: #fff; border-color: #7d2d3b }
+#global-navigation ul li a:active, #global-navigation ul li a:focus { background-color: transparent }
+#global-navigation ul li a:hover,
+#global-navigation ul li a.active { background-color: #d64862; color: #fff; border-color: #7d2d3b }
 #global-navigation ul li.last a { background-color: #fff; color: #d64862; font-size: 110% }
 #global-navigation ul li.last:hover a { animation: phone-icon 3000ms infinite }
 header.fixed { position: fixed;  }
@@ -94,18 +121,23 @@ header.fixed .navbar-toggle { margin-top: 10px }
 
 .category-list .cat-item { padding: 15px }
 .category-list .cat-item > div { height: 300px; }
-.cat-bg { position: relative; background-size: cover; background-position: center }
+.cat-bg { position: relative; background-size: cover; background-position: center; background-blend-mode: multiply; }
+.cat-bg.red { background-color: rgba(236,81,87) }
+.cat-bg.blue { background-color: rgba(0,174,239) }
 .cat-bg a,
-.cat-bg:before { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; content: '';
--webkit-transition: all ease .3s;-o-transition: all ease .3s;transition: all ease .3s }
-.cat-bg.red:before { background-color: rgba(213,30,74,.70) }
-.cat-bg.blue:before { background-color: rgba(13,86,129,.70) }
+.cat-bg:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: '' }
+.cat-bg:before { background-color: rgba(255,255,255,.10) }
 .cat-bg .cat-title { position: absolute; z-index: 2; top: 50%; -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
         transform: translateY(-50%); margin: 0; width: 100%; text-align: center; color: #fff; letter-spacing: 2px; text-shadow: 1px 0px 2px rgba(150, 150, 150, 1) }
-.category-list .cat-bg:hover:before { opacity: .2 }
+.category-list .cat-bg:hover { background-color: transparent }
 
-.story-video { max-width: 700px; margin: 0 auto 3em }
+.service-item { text-align: center }
+.service-item img { max-width: 200px; margin: 0 auto 25px }
+.service-area .content { margin: 2em 0 4em }
+.service-icons { margin-bottom: 2em }
+
+.story-video { max-width: 700px; margin: 20px auto 3em }
 .contact-area .col-md-5 { background-color: #d51e4a }
 .contact-info { max-width: 425px; margin: 0 auto;  padding: 3em 0 }
 .contact-info .contact-section { margin-bottom: 20px }
@@ -122,8 +154,8 @@ header.fixed .navbar-toggle { margin-top: 10px }
     -ms-transform: rotate(30deg);
         transform: rotate(30deg) }
 .contact-area .col-md-7 { border-top: 8px solid #0d5681 }
-.contact-form-section { padding: 2em 1em }
-.contact-form-section h2 { color: #0d5681 }
+.contact-form-section { padding: 2em 3em }
+.contact-form-section h2 { font-family: 'Avenir Bold Italic', serif; color: #0d5681 }
 .contact-form-section p { margin-bottom: 30px }
 .contact-form-section label { position: relative; display: block; margin-bottom: 15px }
 .contact-form-section label i { position: absolute; top: 8px; right: 10px }
@@ -132,13 +164,16 @@ header.fixed .navbar-toggle { margin-top: 10px }
 .contact-form-section input[type="submit"] { background-color: #f21924 }
 .contact-form-section input[type="submit"]:hover,.contact-form-section input[type="submit"]:focus { background-color: #b9141d; border-color: #b9141d }
 .contact-form-section form > p { margin-bottom: 0 }
-footer { padding: 1.2em 0; background-color: #959595 }
+footer { padding: 2em 0; background-color: #959595 }
 footer * { color: #fff; margin-bottom: 0 }
 footer h4 { margin: 0 0 5px }
 footer ul { padding-left: 0 }
-footer ul li { list-style-type: none; font-weight: 700 }
+footer ul li { list-style-type: none; font-family: 'Avenir Bold', serif }
+footer ul li i { margin-right: 5px }
 footer ul li a { margin-left: 5px; color: #fff }
+footer .footer-logo { padding: 5px }
 footer .footer-logo img { width: 100%; height: auto }
+footer .footer-contact { padding: 0; text-align: center }
 
 
 .category-listing { padding: 0 }

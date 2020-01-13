@@ -2,12 +2,12 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="footer-item col-md-2 text-center">
-            <p class="footer-logo">
+          <div class="footer-item footer-logo col-md-2 text-center">
+            <div>
               <a href="#">
                 <img src="<?= get_template_directory_uri(); ?>/assets/img/logo2.gif" alt="<?= get_bloginfo( 'name' ) ?>">
               </a>
-            </p>
+            </div>
           </div>
           <div class="footer-item col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aperiam distinctio doloremque unde dolor, rem, eos minima iure blanditiis. Nisi harum tenetur voluptatem laudantium, ab et ex enim quasi reprehenderit, alias nesciunt officiis debitis id necessitatibus eveniet saepe vero ad.</p></div>
           <div class="footer-item footer-contact col-md-2">
@@ -58,6 +58,32 @@
             sticky.removeClass('fixed');
           }
         }
+        $(document).on("scroll", onScroll);
+        function onScroll(event){
+          var scrollPos = $(document).scrollTop();
+          $('.navbar-nav li a').each(function () {
+              var currLink = $(this);
+              var refElement = $(currLink.attr("href"));
+
+                if((scrollPos + $(window).height()) === $(document).height()) {
+                  $('.scroll_nav .contact').addClass('active').siblings().removeClass('active');
+                } else {
+                  if ((refElement.position().top -120) <= scrollPos && (refElement.position().top) + refElement.height()-120 > scrollPos) {
+                    currLink.addClass("active").siblings().removeClass('active');
+                  }
+                  else{
+                      currLink.removeClass("active");
+                  }
+                }
+          });
+        }
+        $('.navbar-nav li a').click(function(e){
+          e.preventDefault();
+          var id = $(this).attr('href');
+          $('body, html').animate({
+            scrollTop: $(id).offset().top - 30 
+          })
+        })
       });
     </script>
   </body>

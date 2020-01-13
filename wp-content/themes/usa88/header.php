@@ -27,10 +27,10 @@
           </div>
           <div class="collapse navbar-collapse" id="global-navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="/">HOME</a></li>
-              <li><a href="/products">PRODUCTS</a></li>
-              <li><a href="#">SERVICES</a></li>
-              <li><a href="#">ABOUT US</a></li>
+              <li><a class="active" href="#home">HOME</a></li>
+              <li><a href="#products">PRODUCTS</a></li>
+              <li><a href="#about-us">ABOUT US</a></li>
+              <li><a href="#services">SERVICES</a></li>
               <li class="last"><a href="tel:027443467">(02) 744 3467</a></li>
             </ul>
           </div>

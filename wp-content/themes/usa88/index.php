@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section class="hero-area">
+<section class="hero-area" id="home">
   <div class="slider owl-carousel" id="slider">
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner1.jpeg');">
    <div class="container">
@@ -25,7 +25,7 @@
   </div>
 </div>
 </section>
-<section class="category-area">
+<section class="category-area" id="products">
   <div class="heading-2">
     <h2 class="title-h2">BROWSE BY CATEGORY</h2>
   </div>
@@ -58,7 +58,7 @@
     </div>
   </div>
 </section>
-<section class="warehouse-area">
+<section class="warehouse-area" id="about-us">
   <div class="heading-2">
     <h2 class="title-h2">OUR WAREHOUSE</h2>
   </div>
@@ -66,17 +66,58 @@
     <p class="title-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium excepturi nobis voluptate quam hic et maxime ad, cumque vero saepe a sint neque, maiores fugiat necessitatibus tenetur modi facilis repellendus enim natus esse quo, nulla!</p>
   </div>
   <img class="img-responsive" src="<?= get_template_directory_uri() ?>/assets/img/warehouse.jpg" alt="">
+  <section class="story-area">
+    <div class="heading-2">
+      <h2 class="title-h2">OUR STORY</h2>
+    </div>
+    <div class="container">
+      <div class="story-video">
+        <img class="img-responsive" src="<?= get_template_directory_uri() ?>/assets/img/story.jpg" alt="">
+      </div>
+      <div class="content">
+        <p>We are Chemical Alloy Corporation a lubricant manufacturing company since 1993 under the brand name of USA 88. Our aim is to provide and recognize total customer satisfaction in achieving excellence and competence in all of our business under takings. We are committed to improve our products, services and our system through technology innovation, manpower training, efficient and effective processes and team work with our customers and suppliers. As an ISO 9001:2008 Certified Company we have the experience, the knowledge, and the facilities to provide QUALITY PRODUCTS and AFTERSALES SERVICES that will provide TOTAL CUSTOMER SATISFACTION.</p>
+      </div>
+    </div>
+  </section>
 </section>
-<section class="story-area">
+
+<section class="service-area" id="services">
   <div class="heading-2">
-    <h2 class="title-h2">OUR STORY</h2>
+    <h2 class="title-h2">SERVICES</h2>
   </div>
   <div class="container">
-    <div class="story-video">
-      <img class="img-responsive" src="<?= get_template_directory_uri() ?>/assets/img/story.jpg" alt="">
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam consequatur ex debitis ipsam autem maxime, labore, repellat fugit, possimus quibusdam officiis iure adipisci beatae assumenda rem accusantium sint velit minima nam explicabo aspernatur facilis. Excepturi magni laboriosam sint necessitatibus quod adipisci quasi quisquam, provident a. Praesentium commodi dolore itaque explicabo ipsa ut ex, odit distinctio quibusdam. Dolorem enim ipsam laboriosam facilis, tempore molestias nulla fugit quas reiciendis quae earum modi error accusamus, labore eius quod, ratione repellendus, dignissimos in nemo sint cumque. Suscipit id, mollitia eum cumque? Enim, perspiciatis dolorum! Quos placeat quo eum doloremque voluptates, ipsam ad perspiciatis officia!</p>
+      <div class="content">
+          <p>More than manufacturing and distribution, USA88 is engaged in blending, packaging, and bulk storage of lubricants as well as providing technical and aftersales services for total customer satisfaction.</p>
+          <p>As a trusted lubricant solutions provider, the USA88 workforce consists of a team of experts competent with the experience, knowledge, and world-class facilities to deliver QUALITY PRODUCTS and technical know-how for all lubricant requirements and queries.</p>
+      </div>
+      <div class="row service-icons">
+        <div class="col-md-3">
+          <div class="service-item">
+            <img src="/wp-content/uploads/2020/01/s1.gif">
+            <h4>Mixing</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-item">
+            <img src="/wp-content/uploads/2020/01/s2.gif">
+            <h4>Packaging</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-item">
+            <img src="/wp-content/uploads/2020/01/s3.gif">
+            <h4>Bulk Storage</h4>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-item">
+            <img src="/wp-content/uploads/2020/01/s4.gif">
+            <h4>Technical Support</h4>
+          </div>
+        </div>
+      </div>
   </div>
+
 </section>
 <section class="contact-area">
   <div class="container-fluid">
