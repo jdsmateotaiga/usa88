@@ -2,7 +2,7 @@
 $page = 'products';
 include('header.php');
 $parent_category = get_queried_object();
-$cat_image = get_field('category_image_heading', 'category_'.$parent_category->term_id);
+$cat_image = get_field('image_heading', 'category_'.$parent_category->term_id);
 $cat_color_code = get_field('category_color_code', 'category_'.$parent_category->term_id);
 $opposite_color_code = (get_field('category_color_code', 'category_'.$parent_category->term_id) == 'blue') ? 'red' : 'blue';
 if( !$cat_image ) {
@@ -38,9 +38,10 @@ if( !$cat_image ) {
                 foreach($child_categories as $item) {
 
                     if($item->count == 0 || $parent_category->term_id == 5) {
+                        $child_cat_image = get_field('category_image', 'category_'.$item->term_id);
             ?>
                         <div class="col-md-<?= $col ?>  cat-item">
-                            <div class="cat-bg <?= $opposite_color_code ?>" style="background-image: url('<?= $cat_image ?>')">
+                            <div class="cat-bg <?= $opposite_color_code ?>" style="background-image: url('<?= $child_cat_image ?>')">
                                 <a href="<?= get_category_link($item->term_id); ?>">
                                 <h3 class="cat-title"><?= $item->name; ?></h3>
                                 </a>
@@ -82,7 +83,7 @@ if( !$cat_image ) {
                                                             echo '<img class="img-responsive" src="'.$image[0].'" alt="">';
                                                         }
                                                     } else {
-                                                        echo '<img class="img-responsive" src="https://via.placeholder.com/200x300.jpg?text=Placeholder" alt="">';
+                                                        echo '<img class="img-responsive" src="/wp-content/uploads/2020/01/Versa-Fleet-Power-SAE-40-200x300.png" alt="">';
                                                     }
                                                 ?>
                                                 </div>
@@ -132,9 +133,10 @@ if( !$cat_image ) {
             } else {
                   $special_cat = get_the_category_by_ID($parent_category->parent);
                   $special_cat_color_code = get_field('category_color_code', 'category_'.$parent_category->parent);
+                  $special_cat_image = get_field('category_image', 'category_'.$parent_category->parent);
 
         ?>
-                  <div class="cat-heading cat-bg <?= $special_cat_color_code ?>" style="background-image: url('<?= $cat_image; ?>')">
+                  <div class="cat-heading cat-bg <?= $special_cat_color_code ?>" style="background-image: url('<?= $special_cat_image; ?>')">
                       <h1><?= $special_cat ?></h1>
                   </div>
                   <div class="container product-area">
@@ -170,7 +172,7 @@ if( !$cat_image ) {
                                                           echo '<img class="img-responsive" src="'.$image[0].'" alt="">';
                                                       }
                                                   } else {
-                                                      echo '<img class="img-responsive" src="https://via.placeholder.com/200x300.jpg?text=Placeholder" alt="">';
+                                                    echo '<img class="img-responsive" src="/wp-content/uploads/2020/01/Versa-Fleet-Power-SAE-40-200x300.png" alt="">';
                                                   }
                                               ?>
                                               </div>

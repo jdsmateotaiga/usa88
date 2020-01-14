@@ -7,7 +7,7 @@
 
 <section class="hero-area" id="home">
   <div class="slider owl-carousel" id="slider">
-  <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner1.jpeg');">
+  <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner1.jpg');">
    <div class="container">
      <div class="slider-content animated fadeInLeft">
        <h1>POWERING BEYOND<br>PERFORMANCE</h1>
@@ -15,7 +15,7 @@
      </div>
    </div>
   </div>
-  <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner2.jpg');">
+  <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/banner2.jpeg');">
     <div class="container">
       <div class="slider-content">
         <h1>POWERING BEYOND<br>PERFORMANCE</h1>

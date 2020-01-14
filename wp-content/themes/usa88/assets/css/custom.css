@@ -111,7 +111,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
 
 .hero-area { padding: 0 }
 #slider .slider-item { height: 700px; background-repeat: no-repeat; background-size: cover; background-position: center; position: relative }
-#slider .slider-content { padding-top: 8em; width: 50% }
+#slider .slider-content { padding-top: 10em; width: 50% }
 #slider .slider-content h1,
 #slider .slider-content p { color: #fff }
 #slider .slider-content h1 { font-size: 50px }
@@ -123,10 +123,11 @@ header.fixed .navbar-toggle { margin-top: 10px }
 .category-list .cat-item > div { height: 300px }
 .cat-bg { position: relative; background-size: cover; background-position: center; background-blend-mode: multiply }
 .cat-bg.red { background-color: rgba(236,81,87) }
+.cat-heading.cat-bg.red { background-color: #ed1c24 }
 .cat-bg.blue { background-color: rgba(0,174,239) }
 .cat-bg a,
 .cat-bg:before { position: absolute; top: 0; left: 0; right: 0; bottom: 0; content: '' }
-.cat-bg:before { background-color: rgba(255,255,255,.10) }
+.cat-bg:before { background-color: rgba(255,255,255,.01) }
 .cat-bg .cat-title { position: absolute; z-index: 2; top: 50%; -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
         transform: translateY(-50%); margin: 0; width: 100%; text-align: center; color: #fff; letter-spacing: 2px; text-shadow: 1px 0px 2px rgba(150, 150, 150, 1) }
@@ -177,7 +178,7 @@ footer .footer-contact { padding: 0; text-align: center }
 
 
 .category-listing { padding: 0 }
-.category-listing .cat-heading { background-size: cover; padding: 3em; text-align: center }
+.category-listing .cat-heading { background-size: cover; padding: 3em; text-align: center; background-blend-mode: multiply }
 .category-listing .cat-heading h1 { margin: 0; position: relative; z-index: 1; color: #fff  }
 .category-listing .category-list { padding: 15px; }
 .category-listing .category-list .cat-item > div { height: 500px; margin-bottom: 0 }
