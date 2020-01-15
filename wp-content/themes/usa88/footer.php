@@ -77,11 +77,11 @@
                 }
           });
         }
-        $('.navbar-nav li a').click(function(e){
+        $('.scroll-div a').click(function(e){
           e.preventDefault();
           var id = $(this).attr('href');
           $('body, html').animate({
-            scrollTop: $(id).offset().top - 30 
+            scrollTop: $(id).offset().top - 30
           })
         })
       });

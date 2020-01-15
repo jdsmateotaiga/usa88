@@ -46,7 +46,7 @@ section { padding-top: 4em }
 
 .heading-3 { position: relative;  margin-bottom: 35px; padding: 15px; text-align: center }
 .heading-3 * { color: #fff; margin: 0 }
-.heading-3.red { 
+.heading-3.red {
   background: rgba(213,30,73,1);
   background: -moz-linear-gradient(left, rgba(213,30,73,1) 0%, rgba(218,68,68,1) 51%, rgba(213,30,73,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(213,30,73,1)), color-stop(51%, rgba(218,68,68,1)), color-stop(100%, rgba(213,30,73,1)));
@@ -56,7 +56,7 @@ section { padding-top: 4em }
   background: linear-gradient(to right, rgba(213,30,73,1) 0%, rgba(218,68,68,1) 51%, rgba(213,30,73,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d51e49', endColorstr='#d51e49', GradientType=1 );
 }
-.heading-3.blue { 
+.heading-3.blue {
   background: rgba(95,195,225,1);
   background: -moz-linear-gradient(left, rgba(95,195,225,1) 0%, rgba(42,93,155,1) 51%, rgba(95,195,225,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(95,195,225,1)), color-stop(51%, rgba(42,93,155,1)), color-stop(100%, rgba(95,195,225,1)));
@@ -120,8 +120,8 @@ header.fixed .navbar-toggle { margin-top: 10px }
 #slider .owl-prev { left: 15px; z-index: 2 }
 
 .category-list .cat-item { padding: 15px }
-.category-list .cat-item > div { height: 300px; }
-.cat-bg { position: relative; background-size: cover; background-position: center; background-blend-mode: multiply; }
+.category-list .cat-item > div { height: 300px }
+.cat-bg { position: relative; background-size: cover; background-position: center; background-blend-mode: multiply }
 .cat-bg.red { background-color: rgba(236,81,87) }
 .cat-bg.blue { background-color: rgba(0,174,239) }
 .cat-bg a,
@@ -181,6 +181,7 @@ footer .footer-contact { padding: 0; text-align: center }
 .category-listing .cat-heading h1 { margin: 0; position: relative; z-index: 1; color: #fff  }
 .category-listing .category-list { padding: 15px; }
 .category-listing .category-list .cat-item > div { height: 500px; margin-bottom: 0 }
+.category-listing .category-list .cat-item.col-md-3 > div { height: 250px; }
 
 .category-area { padding: 4em 0 }
 .home .category-area { padding-bottom: 0 }
@@ -188,7 +189,7 @@ footer .footer-contact { padding: 0; text-align: center }
 
 .product-area { padding: 4em 0 0 }
 .product-area:last-child { padding-bottom: 4em }
-.product-area .product-item { padding: 30px 20px 5px;
+.product-area .product-item { margin-bottom: 25px; padding: 30px 20px 5px;
   background: rgba(240,240,240,1);
   background: -moz-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 51%, rgba(240,240,240,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,240,240,1)), color-stop(0%, rgba(240,240,240,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(100%, rgba(240,240,240,1)));
@@ -208,10 +209,12 @@ footer .footer-contact { padding: 0; text-align: center }
   background: linear-gradient(to right, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 51%, rgba(232,232,232,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8', GradientType=1 );
 }
-.product-area .product-item h3 { margin: 0 0 30px; text-align: center }
+
+.product-area .product-item h3 { margin: 0 0 30px; font-size: 19px; text-align: center }
 .product-area .product-item h4 { margin-top: 0 }
 .product-area .product-item h5 { margin: 12px 0 0 }
-.product-area .product-item .product-info p { margin-bottom: 0 }
+.product-area .product-item .product-info p { font-size: 14px }
+.product-area .product-item .product-info strong { font-family: 'Avenir Bold'; font-size: 14px }
 
 .no-found { padding: 1.5em 0 2.5em; text-align: center }
 
@@ -219,6 +222,8 @@ footer .footer-contact { padding: 0; text-align: center }
 
   #global-navigation ul li a { padding: 25px 15px }
   .navbar .container { width: 100% }
+  .heading-3 { margin: 0 65px 35px; }
+
 }
 
 @media (max-width: 991px) {

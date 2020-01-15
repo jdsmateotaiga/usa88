@@ -27,10 +27,24 @@
           </div>
           <div class="collapse navbar-collapse" id="global-navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="active" href="#home">HOME</a></li>
-              <li><a href="#products">PRODUCTS</a></li>
-              <li><a href="#about-us">ABOUT US</a></li>
-              <li><a href="#services">SERVICES</a></li>
+              <?php
+                if(is_front_page()) {
+              ?>
+                <li class="scroll-div"><a class="active" href="#home">HOME</a></li>
+                <li class="scroll-div"><a href="#products">PRODUCTS</a></li>
+                <li class="scroll-div"><a href="#about-us">ABOUT US</a></li>
+                <li class="scroll-div"><a href="#services">SERVICES</a></li>
+              <?php
+                } else {
+                  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+              ?>
+                <li><a href="/#home">HOME</a></li>
+                <li><a class="<?= ($page=='products') ? 'active': '' ?>" href="<?= ($page=='products') ? $actual_link : '/#products' ?>">PRODUCTS</a></li>
+                <li><a href="/#about-us">ABOUT US</a></li>
+                <li><a href="/#services">SERVICES</a></li>
+              <?php
+                }
+              ?>
               <li class="last"><a href="tel:027443467">(02) 744 3467</a></li>
             </ul>
           </div>
