@@ -134,6 +134,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
 .category-list .cat-bg:hover { background-color: transparent }
 
 .service-item { text-align: center }
+.service-item h4 { text-transform: uppercase }
 .service-item img { max-width: 200px; margin: 0 auto 25px }
 .service-area .content { margin: 2em 0 4em }
 .service-icons { margin-bottom: 2em }
@@ -218,6 +219,8 @@ footer .footer-contact { padding: 0; text-align: center }
 .product-area .product-item .product-info strong { font-family: 'Avenir Bold'; font-size: 14px }
 
 .no-found { padding: 1.5em 0 2.5em; text-align: center }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border: none!important; color: #ff0000!important; font-weight: 700!important; margin-left: 0!important; padding: 0!important }
 
 @media only screen and (max-width: 1200px) {
 
