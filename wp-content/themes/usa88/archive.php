@@ -29,7 +29,7 @@ if( !$cat_image ) {
                     $col = 4;
                 }
         ?>
-            <div class="cat-heading cat-bg <?= $cat_color_code ?>" style="background-image: url('<?= $cat_image; ?>')">
+            <div class="cat-heading" style="background-image: url('<?= $cat_image; ?>')">
                 <h1><?= $parent_category->name ?></h1>
             </div>
             <div class="container-fluid">
@@ -38,7 +38,7 @@ if( !$cat_image ) {
                 foreach($child_categories as $item) {
 
                     if($item->count == 0 || $parent_category->term_id == 5) {
-                        $child_cat_image = get_field('category_image', 'category_'.$item->term_id);
+                        $child_cat_image = get_field('category_image', 'category_'.$item->term_id)['sizes']['medium_large'];
             ?>
                         <div class="col-md-<?= $col ?>  cat-item">
                             <div class="cat-bg <?= $opposite_color_code ?>" style="background-image: url('<?= $child_cat_image ?>')">
@@ -133,10 +133,9 @@ if( !$cat_image ) {
             } else {
                   $special_cat = get_the_category_by_ID($parent_category->parent);
                   $special_cat_color_code = get_field('category_color_code', 'category_'.$parent_category->parent);
-                  $special_cat_image = get_field('category_image', 'category_'.$parent_category->parent);
-
+                  $special_cat_image = get_field('image_heading', 'category_'.$parent_category->parent);
         ?>
-                  <div class="cat-heading cat-bg <?= $special_cat_color_code ?>" style="background-image: url('<?= $special_cat_image; ?>')">
+                  <div class="cat-heading" style="background-image: url('<?= $special_cat_image; ?>')">
                       <h1><?= $special_cat ?></h1>
                   </div>
                   <div class="container product-area">

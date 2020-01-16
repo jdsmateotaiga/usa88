@@ -136,7 +136,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
 .service-item { text-align: center }
 .service-item h4 { text-transform: uppercase }
 .service-item img { max-width: 200px; margin: 0 auto 25px }
-.service-area .content { margin: 2em 0 4em }
+.service-area .content { margin: 0 0 4em }
 .service-icons { margin-bottom: 2em }
 
 .story-video { max-width: 700px; margin: 20px auto 3em }
@@ -179,7 +179,7 @@ footer .footer-contact { padding: 0; text-align: center }
 
 
 .category-listing { padding: 0 }
-.category-listing .cat-heading { background-size: cover; padding: 3em; text-align: center; background-blend-mode: multiply }
+.category-listing .cat-heading { background-size: cover; padding: 3em; text-align: center; background-position: center }
 .category-listing .cat-heading h1 { margin: 0; position: relative; z-index: 1; color: #fff  }
 .category-listing .category-list { padding: 15px; }
 .category-listing .category-list .cat-item > div { height: 500px; margin-bottom: 0 }
