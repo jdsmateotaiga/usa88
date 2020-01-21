@@ -115,25 +115,25 @@
         <p>As a trusted lubricant solutions provider, the USA88 workforce consists of a team of experts competent with the experience, knowledge, and world-class facilities to deliver QUALITY PRODUCTS and technical know-how for all lubricant requirements and queries.</p>
       </div>
       <div class="row service-icons">
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-3">
           <div class="service-item">
             <img src="/wp-content/uploads/2020/01/s1.gif">
             <h4>Mixing</h4>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-3">
           <div class="service-item">
             <img src="/wp-content/uploads/2020/01/s2.gif">
             <h4>Packaging</h4>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-3">
           <div class="service-item">
             <img src="/wp-content/uploads/2020/01/s3.gif">
             <h4>Bulk Storage</h4>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-3">
           <div class="service-item">
             <img src="/wp-content/uploads/2020/01/s4.gif">
             <h4>Technical Support</h4>
@@ -146,7 +146,7 @@
 <section class="contact-area">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-sm-5">
         <div class="contact-info">
           <div class="contact-section row">
             <div class="col-md-2">
@@ -202,7 +202,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-sm-7">
         <div class="contact-form-section">
           <h2>GET IN TOUCH</h2>
           <p>Here at USA88, we are looking forward to providing our customers with the best service. Contact us and we will revert promptly. The support team are ready and happy to help.</p>

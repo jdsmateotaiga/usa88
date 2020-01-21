@@ -40,7 +40,7 @@ if( !$cat_image ) {
                     if($item->count == 0 || $parent_category->term_id == 5) {
                         $child_cat_image = get_field('category_image', 'category_'.$item->term_id)['sizes']['medium_large'];
             ?>
-                        <div class="col-md-<?= $col ?>  cat-item">
+                        <div class="col-sm-<?= $col ?>  cat-item">
                             <div class="cat-bg <?= $opposite_color_code ?>" style="background-image: url('<?= $child_cat_image ?>')">
                                 <a href="<?= get_category_link($item->term_id); ?>">
                                 <h3 class="cat-title"><?= $item->name; ?></h3>
@@ -50,6 +50,7 @@ if( !$cat_image ) {
             <?php
                     } else {
             ?>
+              <div class="m-15">
                 <div class="container product-area">
                     <div class="heading-3 <?= $opposite_color_code ?>">
                         <h2><?= $item->name ?></h2>
@@ -68,7 +69,7 @@ if( !$cat_image ) {
                             while ( $the_query->have_posts() ) {
                                 $the_query->the_post();
                     ?>
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                         <div class="product-item">
                                           <div class="row">
                                             <h3><?= the_title() ?></h3>
@@ -123,6 +124,7 @@ if( !$cat_image ) {
                         ?>
 
                     </div>
+              </div>
             <?php
                     }
                 }
@@ -138,7 +140,8 @@ if( !$cat_image ) {
                   <div class="cat-heading" style="background-image: url('<?= $special_cat_image; ?>')">
                       <h1><?= $special_cat ?></h1>
                   </div>
-                  <div class="container product-area">
+                  <div class="m-15">
+                    <div class="container product-area">
                         <div class="heading-3 <?= $opposite_color_code ?>">
                             <h2><?= $parent_category->name ?></h2>
                         </div>
@@ -156,7 +159,7 @@ if( !$cat_image ) {
                                     while ( $the_query->have_posts() ) {
                                     $the_query->the_post();
                                 ?>
-                                        <div class="col-md-6">
+                                    <div class="col-sm-6">
                                       <div class="product-item">
                                         <div class="row">
                                           <h3><?= the_title() ?></h3>
@@ -210,6 +213,7 @@ if( !$cat_image ) {
                               ?>
 
                           </div>
+                  </div>
             <?php
                 }
             ?>

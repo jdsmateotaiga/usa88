@@ -70,11 +70,14 @@
                 if((scrollPos + $(window).height()) === $(document).height()) {
                   $('.scroll_nav .contact').addClass('active').siblings().removeClass('active');
                 } else {
-                  if ((refElement.position().top -120) <= scrollPos && (refElement.position().top) + refElement.height()-120 > scrollPos) {
-                    currLink.addClass("active").siblings().removeClass('active');
-                  }
-                  else{
-                      currLink.removeClass("active");
+                  try {
+                    if ((refElement.position().top - 120) <= scrollPos && (refElement.position().top) + refElement.height() - 120 > scrollPos) {
+                      currLink.addClass("active").siblings().removeClass('active');
+                    } else{
+                        currLink.removeClass("active");
+                    }
+                  } catch(e) {
+                    console.log('scrolling');
                   }
                 }
           });
