@@ -235,6 +235,8 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border: none!importa
 
 @media (max-width: 991px) {
 
+  header { padding: 5px 0 }
+  .navbar-collapse { border-top: 2px solid #f2f2f2; padding-top: 20px }
   .navbar-header { float: none }
   .navbar-left,.navbar-right { float: none !important }
   .navbar-toggle { display: block }
