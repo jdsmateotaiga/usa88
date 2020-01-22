@@ -112,8 +112,9 @@ header.fixed .nav li { padding: 0 }
 header.fixed .navbar-toggle { margin-top: 10px }
 
 .hero-area { padding: 0 }
+
 #slider .slider-item { height: 550px; background-repeat: no-repeat; background-size: cover; background-position: center; position: relative }
-#slider .slider-content { padding-top: 12em; width: 50% }
+#slider .slider-content { padding-top: 12em; width: 50%; }
 #slider .slider-content h1,
 #slider .slider-content p { color: #fff }
 #slider .slider-content h1 { font-size: 50px }

@@ -32,7 +32,7 @@
       $(document).ready(function(){
         var owl = $('#slider');
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             items: 1,
             nav: false,
             // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
@@ -43,7 +43,7 @@
             dots: false,
         });
         owl.on('changed.owl.carousel', function(event) {
-            var item = event.item.index - 2;     // Position of the current item
+            var item = event.item.index;     // Position of the current item
             $('#slider .slider-content').removeClass('animated fadeInLeft');
             $('.owl-item').not('.cloned').eq(item).find('.slider-content').addClass('animated fadeInLeft');
         });
