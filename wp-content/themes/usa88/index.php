@@ -10,7 +10,7 @@
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content animated fadeInLeft">
-       <h1>The best in power</h1>
+       <h1>The best <br>in power</h1>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
      </div>
    </div>
@@ -72,7 +72,7 @@
     <h2 class="title-h2">ABOUT US</h2>
   </div>
   <div class="container">
-    <div class="content">
+    <div class="content text-justify">
       <p>USA88 is a trusted lubricants manufacturing and distribution company under Chemical Alloy Corporation. Since its establishment in 1993, USA88 has grown from being a manufacturer and distributor of independent companies into one of the best providers of lubricants and solutions in the country with their additional packaging and storing services.</p>
       <p>With its wide range of world-class products, USA88 lubricants are formulated with the best proficiency to meet quality ISO standards, providing the best power, protection, and performance needed for optimum efficiency.</p>
       <p>Through the vast experience in product innovation coupled with the most extensive background in petroleum processing, USA88 is committed in providing total customer satisfaction by continuously improving products, services, and system through technology innovation, manpower training, efficient and effective processes and team work with customers and suppliers.</p>
@@ -87,7 +87,7 @@
     </div> -->
     <img class="img-responsive" src="<?= get_template_directory_uri() ?>/assets/img/warehouse.jpg" alt="" style="margin-bottom: 3em">
     <div class="container">
-      <div class="content">
+      <div class="content text-justify">
         <h4>WAREHOUSE:</h4>
         <p>Ports and warehouse in La Union, Cebu, Bacolod, Ilo-ilo, Davao, Cagayan de Oro, General Santos, and Butuan are strategically located to ensure constant supply and convenient delivery throughout the Philippines.</p>
         <p>The company logistics system provides fast, reliable, and on time delivery especially for clients outside Metro Manila and the provinces.</p>
@@ -110,7 +110,7 @@
       <div class="story-video">
         <img class="img-responsive" src="<?= get_template_directory_uri() ?>/assets/img/story.jpg" alt="">
       </div>
-      <div class="content">
+      <div class="content text-justify">
         <p>USA88 was established in 1993, primarily as a partner of independent fuel companies in the country. Since then, and with the increasing market demand, USA88 has grown into becoming one of the best alternatives to high-performance lubricants in the country.</p>
         <p>The aim to provide the best lubrication solution in the local market is what drove USA88 to be formed from under Chemical Alloy Corporation and has now emerged as a key player in the Philippine lubricant industry.</p>
         <p>With numerous upgrades, along with a meaningful change in brand image, USA88 currently offers products with ISO certification and provides services using advanced facilities and equipment to support the local sectors of automotive, industrial, construction, and more.</p>
@@ -126,7 +126,7 @@
     <h2 class="title-h2">SERVICES</h2>
   </div>
   <div class="container">
-      <div class="content">
+      <div class="content text-justify">
         <p>More than manufacturing and distribution, USA88 is engaged in blending, packaging, and bulk storage of lubricants as well as providing technical and aftersales services for total customer satisfaction.</p>
         <p>As a trusted lubricant solutions provider, the USA88 workforce consists of a team of experts competent with the experience, knowledge, and world-class facilities to deliver QUALITY PRODUCTS and technical know-how for all lubricant requirements and queries.</p>
       </div>
@@ -221,7 +221,7 @@
       <div class="col-sm-7">
         <div class="contact-form-section">
           <h2>GET IN TOUCH</h2>
-          <p>Here at USA88, we are looking forward to providing our customers with the best service. Contact us and we will revert promptly. The support team are ready and happy to help.</p>
+          <p class="text-justify">Here at USA88, we are looking forward to providing our customers with the best service. Contact us and we will revert promptly. The support team are ready and happy to help.</p>
           <div>
             <?= do_shortcode('[contact-form-7 id="8" title="Contact form 1"]'); ?>
           </div>

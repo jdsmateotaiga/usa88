@@ -56,20 +56,30 @@ if( !$cat_image ) {
                         <h2><?= $item->name ?></h2>
                     </div>
                     <?php
+                        
                         $args = array(
                             'post_type'     => 'products',
                             'category_name' => $item->slug,
                             'order'   => 'ASC',
                         );
                         $the_query = new WP_Query( $args );
+                        $count = $the_query->found_posts;
+                        $isodd = '';
+                        $c = 0;
+                        $remainder = $count % 2;
+                        if($remainder != 0){
+                            $isodd = 'col-sm-offset-3';
+                        }
                         if ( $the_query->have_posts() ) {
                     ?>
                         <div class="product-listing row">
                     <?php
                             while ( $the_query->have_posts() ) {
                                 $the_query->the_post();
+                                $c++;
+                                
                     ?>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 <?= ($count == $c) ? $isodd : '' ?>">
                                         <div class="product-item">
                                           <div class="row">
                                             <h3><?= the_title() ?></h3>
@@ -152,14 +162,22 @@ if( !$cat_image ) {
                                 'order'   => 'ASC',
                             );
                             $the_query = new WP_Query( $args );
+                            $count = $the_query->found_posts;
+                            $isodd = '';
+                            $c = 0;
+                            $remainder = $count % 2;
+                            if($remainder != 0){
+                                $isodd = 'col-sm-offset-3';
+                            }
                             if ( $the_query->have_posts() ) {
                         ?>
                                 <div class="product-listing row">
                                 <?php
                                     while ( $the_query->have_posts() ) {
                                     $the_query->the_post();
+                                    $c++;
                                 ?>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 <?= ($count == $c) ? $isodd : '' ?>">
                                       <div class="product-item">
                                         <div class="row">
                                           <h3><?= the_title() ?></h3>

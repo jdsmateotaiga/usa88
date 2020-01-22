@@ -37,7 +37,6 @@ main { margin-top: 78px }
 main.fixed { margin-top: 58px }
 section { padding-top: 4em }
 
-.m-15 { margin: -15px }
 
 .title-h2 { background-color: #fff; letter-spacing: 2px }
 .heading-2 { text-align: center; position: relative; margin-bottom: 2em }
@@ -112,7 +111,7 @@ header.fixed .nav li { padding: 0 }
 header.fixed .navbar-toggle { margin-top: 10px }
 
 .hero-area { padding: 0 }
-
+#slider { position: relative }
 #slider .slider-item { height: 550px; background-repeat: no-repeat; background-size: cover; background-position: center; position: relative }
 #slider .slider-content { padding-top: 12em; width: 50%; }
 #slider .slider-content h1,
@@ -121,6 +120,9 @@ header.fixed .navbar-toggle { margin-top: 10px }
 #slider .slider-content p { font-size: 20px; }
 #slider .owl-next { right: 15px; z-index: 2 }
 #slider .owl-prev { left: 15px; z-index: 2 }
+#slider .owl-dots { position: absolute; bottom: 10px; width: 100%; z-index: 1; text-align: center }
+#slider .owl-dots .owl-dot { margin: 0 8px; width: 18px; height: 18px; border-radius: 100%; background-color:rgba(255,255,255,.4); outline: none; }
+#slider .owl-dots .owl-dot.active { background-color:rgba(255,255,255,1) }
 
 .category-list .cat-item { padding: 15px }
 .category-list .cat-item > div { height: 300px }
@@ -160,7 +162,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
         transform: rotate(30deg) }
 .contact-area .col-sm-7 { border-top: 8px solid #0d5681 }
 .contact-form-section { padding: 2em 3em }
-.contact-form-section h2 { font-family: 'Avenir Bold Italic', serif; color: #0d5681 }
+.contact-form-section h2 { font-family: 'Avenir Bold Italic', serif; color: #0d5681; margin-bottom: 15px }
 .contact-form-section p { margin-bottom: 30px }
 .contact-form-section label { position: relative; display: block; margin-bottom: 15px }
 .contact-form-section label i { position: absolute; top: 8px; right: 10px }
