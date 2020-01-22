@@ -10,24 +10,24 @@
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content animated fadeInLeft">
-       <h1>THE BEST IN POWER</h1>
-       <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p> -->
+       <h1>The best in power</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
      </div>
    </div>
   </div>
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content">
-       <h1>THE BEST IN PERFORMANCE</h1>
-       <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p> -->
+       <h1>The best in performance</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
      </div>
    </div>
   </div>
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content">
-       <h1>THE BEST IN PROTECTION</h1>
-       <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p> -->
+       <h1>The best in protection</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
      </div>
    </div>
   </div>

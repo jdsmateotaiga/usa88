@@ -118,7 +118,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
 #slider .slider-content h1,
 #slider .slider-content p { color: #fff }
 #slider .slider-content h1 { font-size: 50px }
-#slider .slider-content p { font-size: 20px }
+#slider .slider-content p { font-size: 20px; }
 #slider .owl-next { right: 15px; z-index: 2 }
 #slider .owl-prev { left: 15px; z-index: 2 }
 
@@ -258,7 +258,8 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border: none!importa
   .m-15 { margin: 0 }
 
   #slider .slider-content { padding: 5em 0; width: 100% }
-  #slider .slider-item { height: auto }
+  #slider .slider-item { height: 300px }
+  #slider .slider-content p { font-size: 16px; line-height: 1.2 }
   .service-area .content { margin-bottom: 2em }
   .service-area .service-item { margin-bottom: 20px }
   .service-area .service-item img { margin-bottom: 10px }

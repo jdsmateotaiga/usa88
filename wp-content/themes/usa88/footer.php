@@ -41,12 +41,13 @@
             autoplayHoverPause:true,
             animateOut: 'fadeOut',
             dots: false,
+            autoHeight: false,
         });
-        owl.on('changed.owl.carousel', function(event) {
-            var item = event.item.index;     // Position of the current item
-            $('#slider .slider-content').removeClass('animated fadeInLeft');
-            $('.owl-item').not('.cloned').eq(item).find('.slider-content').addClass('animated fadeInLeft');
-        });
+        // owl.on('changed.owl.carousel', function(event) {
+        //     var item = event.item.index;     // Position of the current item
+        //     $('#slider .slider-content').removeClass('animated fadeInLeft');
+        //     $('.owl-item').not('.cloned').eq(item).find('.slider-content').addClass('animated fadeInLeft');
+        // });
         $(window).scroll(function(){
           nav_scroll();
         });
