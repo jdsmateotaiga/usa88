@@ -32,7 +32,7 @@
       $(document).ready(function(){
         var owl = $('#slider');
         owl.owlCarousel({
-            loop: false,
+            loop: true,
             items: 1,
             nav: false,
             // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
