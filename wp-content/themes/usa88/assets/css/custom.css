@@ -37,6 +37,11 @@ main { margin-top: 78px }
 main.fixed { margin-top: 58px }
 section { padding-top: 4em }
 
+.pdf-link { font-size: 28px; }
+.pdf-link:hover i { color: blue }
+
+.view-more .content { height: 200px; overflow: hidden }
+.view-more .more { text-decoration: underline }
 
 .title-h2 { background-color: #fff; letter-spacing: 2px }
 .heading-2 { text-align: center; position: relative; margin-bottom: 2em }
@@ -140,20 +145,20 @@ header.fixed .navbar-toggle { margin-top: 10px }
 
 .service-item { text-align: center }
 .service-item h4 { text-transform: uppercase }
-.service-item img { max-width: 200px; margin: 0 auto 25px }
+.service-item img { max-width: 170px; margin: 0 auto 25px }
 .service-area .content { margin: 0 0 4em }
 .service-icons { margin-bottom: 2em }
 
 .story-video { max-width: 700px; margin: 20px auto 3em }
 .contact-area .col-sm-5 { background-color: #d51e4a }
-.contact-info { max-width: 425px; margin: 0 auto;  padding: 3em 0 }
+.contact-info { padding: 3em 0 }
 .contact-info .contact-section { margin-bottom: 20px }
 .contact-info .contact-section * { color: #fff!important }
 .contact-info .contact-section h5 { margin-bottom: 5px }
 .contact-info .contact-section p { font-size: 14px }
 .contact-info .contact-section .contact-icon { padding: 10px 0; text-align: center }
 .contact-info .contact-section .contact-icon img { width: 45px }
-.contact-info .contact-section .contact-details { max-width: 300px }
+.contact-info .contact-section .contact-details { padding-right: 30px; }
 .social-media ul { margin-top: 3em; padding: 0; text-align: center }
 .social-media ul li { display: inline-block; margin: 0 2em }
 .social-media ul li a i { color: #fff; font-size: 30px }
@@ -224,13 +229,17 @@ footer .footer-contact { padding: 0; text-align: center }
 .product-area .product-item .product-info p { font-size: 14px }
 .product-area .product-item .product-info strong { font-family: 'Avenir Bold'; font-size: 14px }
 
+.product-modal-body { padding: 15px 35px }
+.mail-alert { margin-top: 15px }
+
 .no-found { padding: 1.5em 0 2.5em; text-align: center }
 
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border: none!important; color: #ff0000!important; font-weight: 700!important; margin-left: 0!important; padding: 0!important }
 
 @media only screen and (max-width: 1200px) {
 
-  #global-navigation ul li a { padding: 25px 15px }
+  header.fixed #global-navigation ul li a,
+  #global-navigation ul li a { padding: 25px 10px }
   .navbar .container { width: 100% }
   .heading-3 { margin: 0 65px 35px; }
 
@@ -265,7 +274,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing { border: none!importa
   .service-area .content { margin-bottom: 2em }
   .service-area .service-item { margin-bottom: 20px }
   .service-area .service-item img { margin-bottom: 10px }
-  .contact-info .contact-section .contact-details { max-width: none; text-align: center }
+  .contact-info .contact-section .contact-details { padding-right: 0; text-align: center }
 
   .product-area .product-item { padding: 35px 20px 25px }
   .product-area .product-item .product-image { text-align: center }

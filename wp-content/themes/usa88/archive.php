@@ -56,7 +56,7 @@ if( !$cat_image ) {
                         <h2><?= $item->name ?></h2>
                     </div>
                     <?php
-                        
+
                         $args = array(
                             'post_type'     => 'products',
                             'category_name' => $item->slug,
@@ -77,7 +77,7 @@ if( !$cat_image ) {
                             while ( $the_query->have_posts() ) {
                                 $the_query->the_post();
                                 $c++;
-                                
+
                     ?>
                                     <div class="col-sm-6 <?= ($count == $c) ? $isodd : '' ?>">
                                         <div class="product-item">
@@ -114,10 +114,74 @@ if( !$cat_image ) {
                                                 <?php
                                                       }
                                                 ?>
+                                                <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
+                                                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                                </a>
                                                 </div>
                                             </div>
                                           </div>
                                         </div>
+                                    </div>
+                                    <div class="modal fade" id="productModal-<?=$c?>" tabindex="-1" role="dialog" aria-labelledby="Product" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-body product-modal-body">
+                                            <div class="row">
+                                              <div class="col-sm-12">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="col-sm-12">
+                                                <h4><?= the_title(); ?></h4>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h5>PRODUCT BULLETIN</h5>
+                                                <ul>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h5>MSDS</h5>
+                                                <ul>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                              <div class="col-sm-12">
+                                                <form class="email-submit" action="/" method="post">
+                                                  <p style="margin-top: 20px;"><small><strong>Info:</strong> Please provide your email below to get the link of the files.</small></p>
+                                                  <input type="hidden" class="product-title-for-email" value="<?= the_title() ?>">
+                                                  <input type="hidden" class="files-for-email" name="files" value="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdfx???xhttp://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf">
+                                                  <div class="form-group" style="margin-bottom: 5px">
+                                                    <input type="email" class="form-control email-for-file" name="email" autocomplete="off" placeholder="example@mail.com" required>
+                                                  </div>
+                                                  <input type="submit" name="submit" class="btn btn-primary" value="SEND">
+                                                </form>
+                                                <div class="alert-area">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                     <?php
                             }
@@ -212,11 +276,76 @@ if( !$cat_image ) {
                                               <?php
                                                     }
                                               ?>
+                                              <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
+                                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                              </a>
                                               </div>
                                           </div>
                                         </div>
                                       </div>
-                                  </div>
+
+                                    </div>
+                                    <div class="modal fade" id="productModal-<?=$c?>" tabindex="-1" role="dialog" aria-labelledby="Product" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-body product-modal-body">
+                                            <div class="row">
+                                              <div class="col-sm-12">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="col-sm-12">
+                                                <h4><?= the_title(); ?></h4>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h5>PRODUCT BULLETIN</h5>
+                                                <ul>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h5>MSDS</h5>
+                                                <ul>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                  <li>
+                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
+                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                              <div class="col-sm-12">
+                                                <form class="email-submit" action="/" method="post">
+                                                  <p style="margin-top: 20px;"><small><strong>Info:</strong> Please provide your email below to get the link of the files.</small></p>
+                                                  <input type="hidden" class="product-title-for-email" value="<?= the_title() ?>">
+                                                  <input type="hidden" class="files-for-email" name="files" value="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdfx???xhttp://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf">
+                                                  <div class="form-group" style="margin-bottom: 5px">
+                                                    <input type="email" class="form-control email-for-file" name="email" autocomplete="off" placeholder="example@mail.com" required>
+                                                  </div>
+                                                  <input type="submit" name="submit" class="btn btn-primary" value="SEND">
+                                                </form>
+                                                <div class="alert-area">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                 <?php
                                     }
                                 ?>

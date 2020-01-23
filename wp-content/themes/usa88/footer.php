@@ -89,7 +89,50 @@
           $('body, html').animate({
             scrollTop: $(id).offset().top - 30
           })
-        })
+        });
+        $('.view-more .more').click(function(e){
+          e.preventDefault();
+          if($(this).text() == 'View More') {
+            $(this).parents('.view-more').find('.content').css('height', 'auto');
+            $(this).text('View Less');
+          } else {
+            $(this).parents('.view-more').find('.content').css('height', '200px');
+            $(this).text('View More');
+          }
+        });
+        $('.email-submit').submit(function(e){
+          e.preventDefault();
+          var files = $(this).find('.files-for-email').val(),
+              email = $(this).find('.email-for-file').val(),
+              title = $(this).find('.product-title-for-email').val();
+          $.ajax({
+            type: "POST",
+            url: '/wp-content/themes/usa88/mail.php',
+            context: this,
+            data: {
+              files,
+              email,
+              title
+            },
+            success: function(res){
+              var data = JSON.parse(res);
+              var html = '';
+              var email = $(this).find('.email-for-file').val(),
+              if(data.status == 1) {
+                html = `<div class="mail-alert alert alert-success alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <small><strong>Success!</strong>&nbsp;&nbsp;${data.message} ${email}</small>
+                </div>`;
+              } else {
+                html = `<div class="mail-alert alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <small><strong>Danger!</strong>&nbsp;&nbsp;${data.message}</small>
+                </div>`;
+              }
+              $(this).parent().find('.alert-area').html(html);
+            }
+          });
+        });
       });
     </script>
   </body>

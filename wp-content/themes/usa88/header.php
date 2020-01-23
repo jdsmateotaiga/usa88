@@ -36,6 +36,7 @@
                 <li class="scroll-div"><a href="#products">PRODUCTS</a></li>
                 <li class="scroll-div"><a href="#about-us">ABOUT US</a></li>
                 <li class="scroll-div"><a href="#services">SERVICES</a></li>
+                <li class="scroll-div"><a href="#contact">GET IN TOUCH</a></li>
               <?php
                 } else {
               ?>
@@ -43,6 +44,7 @@
                 <li><a class="<?= ($page=='products') ? 'active': '' ?>" href="/#products">PRODUCTS</a></li>
                 <li><a href="/#about-us">ABOUT US</a></li>
                 <li><a href="/#services">SERVICES</a></li>
+                <li><a href="/#contact">GET IN TOUCH</a></li>
               <?php
                 }
               ?>
