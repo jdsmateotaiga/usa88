@@ -4,21 +4,33 @@ error_reporting(0);
 // Multiple recipients
 $from    = 'ibitswebsolutions@gmail.com';
 $to  = $_POST['email'];
-$files = explode('x???x', $_POST['files']);
+$bulletin_files = explode('x???x', $_POST['bulletin_files']);
+$msds_files = explode('x???x', $_POST['msds_files']);
 $name  = 'USA88 Lubes';
 // Subject
 $subject = $_POST['title'];
 
 // Message
 $message = '';
-foreach($files as $item) {
-  $message .= '<tr><td>'.$item.'</td></tr>';
+if($bulletin_files){
+  $message .= '<tr><td>PRODUCT BULLETIN</td></tr>';
+  foreach($bulletin_files as $item) {
+    $message .= '<tr><td>'.$item.'</td></tr>';
+  }
+}
+if($msds_files){
+  $message .= '<tr><td>MSDS</td></tr>';
+  foreach($msds_files as $item) {
+    $message .= '<tr><td>'.$item.'</td></tr>';
+  }
 }
 
 $body = '
  <h2>'.$subject.'</h2>
  <table>
-  '.$message.'
+ '.$message.'
+ </table>
+ <table>
   <tr>
     <br>
     <br>
@@ -30,11 +42,7 @@ $body = '
     227 Gen. Ordonez St. Corner Balagtas St., Parang Marikina City, Philippines 1809
   </tr>
  </table>
-
 ';
-// echo $to .'<br>';
-// echo $subject .'<br>';
-// echo $message;
 
 // To send HTML mail, the Content-type header must be set
 $headers[] = 'MIME-Version: 1.0';
@@ -63,7 +71,5 @@ if($to == '' ) {
         ];
     }
 }
-
 echo json_encode($response);
-
 ?>

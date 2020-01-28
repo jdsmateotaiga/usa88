@@ -102,7 +102,8 @@
         });
         $('.email-submit').submit(function(e){
           e.preventDefault();
-          var files = $(this).find('.files-for-email').val(),
+          var bulletin_files = $(this).find('.files-for-email-bulletin').val(),
+              msds_files = $(this).find('.files-for-email-msds').val(),
               email = $(this).find('.email-for-file').val(),
               title = $(this).find('.product-title-for-email').val();
           $.ajax({
@@ -110,14 +111,15 @@
             url: '/wp-content/themes/usa88/mail.php',
             context: this,
             data: {
-              files,
+              bulletin_files,
+              msds_files,
               email,
               title
             },
             success: function(res){
               var data = JSON.parse(res);
               var html = '';
-              var email = $(this).find('.email-for-file').val(),
+              var email = $(this).find('.email-for-file').val();
               if(data.status == 1) {
                 html = `<div class="mail-alert alert alert-success alert-dismissible" role="alert">
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

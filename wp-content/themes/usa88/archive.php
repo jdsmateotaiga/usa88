@@ -56,7 +56,6 @@ if( !$cat_image ) {
                         <h2><?= $item->name ?></h2>
                     </div>
                     <?php
-
                         $args = array(
                             'post_type'     => 'products',
                             'category_name' => $item->slug,
@@ -76,8 +75,11 @@ if( !$cat_image ) {
                     <?php
                             while ( $the_query->have_posts() ) {
                                 $the_query->the_post();
+                                $bulletin = get_field('field_5e306dfffbc5a');
+                                $msds = get_field('field_5e306e2f7a177');
+                                $bulletin_files = [];
+                                $msds_files = [];
                                 $c++;
-
                     ?>
                                     <div class="col-sm-6 <?= ($count == $c) ? $isodd : '' ?>">
                                         <div class="product-item">
@@ -105,18 +107,19 @@ if( !$cat_image ) {
                                                 <?= the_content() ?>
                                                 <?php } else {
                                                 ?>
-                                                  <h4>Two Stroke Motorcycle Oil</h4>
-                                                  Recommended for tricycles, motorcycles, scooter, lawn mowers, small tractors and other portable equipment powered by two-stroke engines.
-                                                  <h5>RECOMMENDED RATIO:</h5>
-                                                  30 parts fuel to 1 part 2T
-                                                  <h5>PACKAGING:</h5>
-                                                  200mL, 1000mL, Pails, Drums
+                                                  <p>Not Available!</p>
                                                 <?php
                                                       }
+                                                    if( $bulletin || $msds ) {
                                                 ?>
-                                                <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
-                                                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                                </a>
+                                                        <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
+                                                          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                                        </a>
+                                                <?php
+                                                    }
+                                                ?>
+
+
                                                 </div>
                                             </div>
                                           </div>
@@ -135,41 +138,58 @@ if( !$cat_image ) {
                                               <div class="col-sm-12">
                                                 <h4><?= the_title(); ?></h4>
                                               </div>
+                                              <?php
+                                                if($bulletin) {
+                                              ?>
                                               <div class="col-sm-6">
                                                 <h5>PRODUCT BULLETIN</h5>
                                                 <ul>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
+                                                  <?php
+                                                    foreach($bulletin as $item) {
+                                                      $bulletin_files[] = $item['product_bulletin_file']['url'];
+                                                  ?>
+                                                        <li>
+                                                          <a href="<?= $item['product_bulletin_file']['url'] ?>" target="_blank">
+                                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;<?= $item['product_bulletin_file']['title'] ?>&nbsp;&nbsp;
+                                                          </a>
+                                                          <small><?= size_format( filesize( get_attached_file( $item['product_bulletin_file']['ID'] ) ), 2) ?></small>
+                                                        </li>
+                                                  <?php
+                                                    }
+                                                  ?>
                                                 </ul>
                                               </div>
+                                              <?php
+                                                }
+                                                if($msds) {
+                                              ?>
                                               <div class="col-sm-6">
                                                 <h5>MSDS</h5>
                                                 <ul>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
+                                                  <?php
+                                                    foreach($msds as $item) {
+                                                      $msds_files[] = $item['product_msds_file']['url'];
+                                                  ?>
+                                                        <li>
+                                                          <a href="<?= $item['product_msds_file']['url'] ?>" target="_blank">
+                                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;<?= $item['product_msds_file']['title'] ?>&nbsp;&nbsp;
+                                                          </a>
+                                                          <small><?= size_format( filesize( get_attached_file( $item['product_msds_file']['ID'] ) ), 2) ?></small>
+                                                        </li>
+                                                  <?php
+                                                    }
+                                                  ?>
                                                 </ul>
                                               </div>
+                                              <?php
+                                                }
+                                              ?>
                                               <div class="col-sm-12">
                                                 <form class="email-submit" action="/" method="post">
                                                   <p style="margin-top: 20px;"><small><strong>Info:</strong> Please provide your email below to get the link of the files.</small></p>
                                                   <input type="hidden" class="product-title-for-email" value="<?= the_title() ?>">
-                                                  <input type="hidden" class="files-for-email" name="files" value="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdfx???xhttp://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf">
+                                                  <input type="hidden" class="files-for-email-bulletin" name="bulletin_files" value="<?= implode('x???x', $bulletin_files) ?>">
+                                                  <input type="hidden" class="files-for-email-msds" name="msds_files" value="<?= implode('x???x', $msds_files) ?>">
                                                   <div class="form-group" style="margin-bottom: 5px">
                                                     <input type="email" class="form-control email-for-file" name="email" autocomplete="off" placeholder="example@mail.com" required>
                                                   </div>
@@ -239,6 +259,8 @@ if( !$cat_image ) {
                                 <?php
                                     while ( $the_query->have_posts() ) {
                                     $the_query->the_post();
+                                    $bulletin = get_field('field_5e306dfffbc5a');
+                                    $msds = get_field('field_5e306e2f7a177');
                                     $c++;
                                 ?>
                                     <div class="col-sm-6 <?= ($count == $c) ? $isodd : '' ?>">
@@ -267,18 +289,17 @@ if( !$cat_image ) {
                                               <?= the_content() ?>
                                               <?php } else {
                                               ?>
-                                                <h4>Two Stroke Motorcycle Oil</h4>
-                                                Recommended for tricycles, motorcycles, scooter, lawn mowers, small tractors and other portable equipment powered by two-stroke engines.
-                                                <h5>RECOMMENDED RATIO:</h5>
-                                                30 parts fuel to 1 part 2T
-                                                <h5>PACKAGING:</h5>
-                                                200mL, 1000mL, Pails, Drums
+                                                <p>Not Available!</p>
+                                              <?php
+                                                    }
+                                                    if( $bulletin || $msds ) {
+                                              ?>
+                                                        <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
+                                                          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                                        </a>
                                               <?php
                                                     }
                                               ?>
-                                              <a href="#" class="pdf-link" data-toggle="modal" data-target="#productModal-<?=$c?>">
-                                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                              </a>
                                               </div>
                                           </div>
                                         </div>
@@ -298,36 +319,52 @@ if( !$cat_image ) {
                                               <div class="col-sm-12">
                                                 <h4><?= the_title(); ?></h4>
                                               </div>
+                                              <?php
+                                                if($bulletin) {
+                                              ?>
                                               <div class="col-sm-6">
                                                 <h5>PRODUCT BULLETIN</h5>
                                                 <ul>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/DIESEL%20ENGINE%20OIL/VFULTIMA15W40.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
+                                                  <?php
+                                                    foreach($bulletin as $item) {
+
+                                                  ?>
+                                                        <li>
+                                                          <a href="<?= $item['product_bulletin_file']['url'] ?>" target="_blank">
+                                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;<?= $item['product_bulletin_file']['title'] ?>&nbsp;&nbsp;
+                                                          </a>
+                                                          <small><?= size_format( filesize( get_attached_file( $item['product_bulletin_file']['ID'] ) ), 2) ?></small>
+                                                        </li>
+                                                  <?php
+                                                    }
+                                                  ?>
                                                 </ul>
                                               </div>
+                                              <?php
+                                                }
+                                                if($msds) {
+                                              ?>
                                               <div class="col-sm-6">
                                                 <h5>MSDS</h5>
                                                 <ul>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a href="http://usa88lubes.com/file-manager/files/MSDS/ENGINE%20OIL/MSDS%20VFULTIMA%20REV%200.pdf" target="_blank">
-                                                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;20<small>&nbsp;KB</small>
-                                                    </a>
-                                                  </li>
+                                                  <?php
+                                                    foreach($msds as $item) {
+                                                  ?>
+                                                        <li>
+                                                          <a href="<?= $item['product_msds_file']['url'] ?>" target="_blank">
+                                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;<?= $item['product_msds_file']['title'] ?>&nbsp;&nbsp;
+                                                          </a>
+                                                          <small><?= size_format( filesize( get_attached_file( $item['product_msds_file']['ID'] ) ), 2) ?></small>
+                                                        </li>
+                                                  <?php
+                                                    }
+                                                  ?>
                                                 </ul>
                                               </div>
+                                              <?php
+                                                }
+                                              ?>
+
                                               <div class="col-sm-12">
                                                 <form class="email-submit" action="/" method="post">
                                                   <p style="margin-top: 20px;"><small><strong>Info:</strong> Please provide your email below to get the link of the files.</small></p>

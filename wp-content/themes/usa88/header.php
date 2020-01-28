@@ -23,9 +23,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">
-              <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?= get_bloginfo( 'name' ) ?>">
-            </a>
+            <h1 style="margin: 0">
+              <a class="navbar-brand" href="/">
+                <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?= get_bloginfo( 'name' ) ?>">
+              </a>
+            </h1>
           </div>
           <div class="collapse navbar-collapse" id="global-navigation">
             <ul class="nav navbar-nav navbar-right">
@@ -48,7 +50,7 @@
               <?php
                 }
               ?>
-              <li class="last"><a href="tel:027443467">(02) 744 3467</a></li>
+              <li class="last"><a href="tel:85189998">8518-9998</a></li>
             </ul>
           </div>
         </div>

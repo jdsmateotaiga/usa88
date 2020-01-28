@@ -10,24 +10,24 @@
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content animated fadeInLeft">
-       <h1>The best <br>in power</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
+       <h2>The best <br>in power</h2>
+       <p>Give the ultimate boost of power to bring out the best in your machine.</p>
      </div>
    </div>
   </div>
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content">
-       <h1>The best in performance</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
+       <h2>The best in performance</h2>
+       <p>Reach optimum potential for all types of performance specifications.</p>
      </div>
    </div>
   </div>
   <div class="slider-item" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/home.jpg');">
    <div class="container">
      <div class="slider-content">
-       <h1>The best in protection</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cumque unde totam minus laborum beatae repudiandae molestias dolores, illum assumenda.</p>
+       <h2>The best in protection</h2>
+       <p>Put on exceptional protection for an extended equipment life.</p>
      </div>
    </div>
   </div>
@@ -215,9 +215,9 @@
               <div class="contact-details">
                 <h4>OUR NUMBER</h4>
                 <h5>MANILA OFFICE:</h5>
-                <p>(632) 744 3467 to 68</p>
+                <p><a href="tel:85189998">8518-9998</a></p>
                 <h5>MARIKINA PLANT:</h5>
-                <p>(632) 518 9998</p>
+                <p><a href="tel:6325189998">(632) 518 9998</a></p>
               </div>
             </div>
           </div>
