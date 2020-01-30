@@ -104,6 +104,7 @@ box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.20); background-color: #fff; width: 100
 .nav li { display: inline-block; vertical-align: middle; padding: 5px 0; float: none }
 #global-navigation ul li a { font-weight: 700; padding: 25px 20px; letter-spacing: 1.5px; line-height: 1; border-bottom: 3px solid transparent }
 #global-navigation ul li a:active, #global-navigation ul li a:focus { background-color: transparent }
+#menu-sub-page-menu .product a,
 #global-navigation ul li a:hover,
 #global-navigation ul li a.active { background-color: #d64862; color: #fff; border-color: #7d2d3b }
 #global-navigation ul li.last a { background-color: #fff; color: #d64862; font-size: 110% }

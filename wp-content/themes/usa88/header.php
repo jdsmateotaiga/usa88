@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#d51e4a">
     <meta name="theme-color" content="#0d5681">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?= get_field('field_5e331e24967e1')?>" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
@@ -25,33 +25,27 @@
             </button>
             <h1 style="margin: 0">
               <a class="navbar-brand" href="/">
-                <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?= get_bloginfo( 'name' ) ?>">
+                <img src="<?= get_field('field_5e331dc250da3')?>" alt="<?= get_bloginfo( 'name' ) ?>">
               </a>
             </h1>
           </div>
           <div class="collapse navbar-collapse" id="global-navigation">
-            <ul class="nav navbar-nav navbar-right">
+            <!-- <ul class="nav navbar-nav navbar-right"> -->
               <?php
                 if(is_front_page()) {
-              ?>
-                <li class="scroll-div"><a class="active" href="#home">HOME</a></li>
-                <li class="scroll-div"><a href="#products">PRODUCTS</a></li>
-                <li class="scroll-div"><a href="#about-us">ABOUT US</a></li>
-                <li class="scroll-div"><a href="#services">SERVICES</a></li>
-                <li class="scroll-div"><a href="#contact">GET IN TOUCH</a></li>
-              <?php
+                  wp_nav_menu( array(
+                  'theme_location' => 'homepage_menu',
+                  'menu_class' => 'nav navbar-nav navbar-right scroll-div',
+                 ) );
                 } else {
-              ?>
-                <li><a href="/#home">HOME</a></li>
-                <li><a class="<?= ($page=='products') ? 'active': '' ?>" href="/#products">PRODUCTS</a></li>
-                <li><a href="/#about-us">ABOUT US</a></li>
-                <li><a href="/#services">SERVICES</a></li>
-                <li><a href="/#contact">GET IN TOUCH</a></li>
-              <?php
+                 wp_nav_menu( array(
+                  'theme_location' => 'subpage_menu',
+                  'menu_class' => 'nav navbar-nav navbar-right',
+                 ) );
                 }
               ?>
-              <li class="last"><a href="tel:85189998">8518-9998</a></li>
-            </ul>
+
+            <!-- </ul> -->
           </div>
         </div>
       </nav>

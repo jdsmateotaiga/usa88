@@ -4,20 +4,16 @@
         <div class="row">
           <div class="footer-item footer-logo col-md-2 text-center">
             <div>
-              <a href="#">
-                <img src="<?= get_template_directory_uri(); ?>/assets/img/logo2.gif" alt="<?= get_bloginfo( 'name' ) ?>">
+              <a href="/">
+                <img src="<?= get_field('field_5e331f1cdc08b') ?>" alt="<?= get_bloginfo( 'name' ) ?>">
               </a>
             </div>
           </div>
           <div class="footer-item col-md-8">
-            <p>USA88 is a trusted lubricant manufacturing and distribution company that aims to provide the best lubrication solution for total customer satisfaction.</p>
+            <?= get_field('field_5e331f55dc08c') ?>
           </div>
           <div class="footer-item footer-contact col-md-2">
-            <h4>CONTACT US:</h4>
-            <ul>
-              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:027443467">(02) 744 3467</a></li>
-              <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:usa88@gmail.com">usa88@gmail.com</a></li>
-            </ul>
+            <?= get_field('field_5e331f78dc08d') ?>
           </div>
         </div>
       </div>
