@@ -163,6 +163,7 @@ header.fixed .navbar-toggle { margin-top: 10px }
 .social-media ul { margin-top: 3em; padding: 0; text-align: center }
 .social-media ul li { display: inline-block; margin: 0 2em }
 .social-media ul li a i { color: #fff; font-size: 30px }
+.social-media ul li a span { display: none }
 .social-media ul li:hover a i { -webkit-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
         transform: rotate(30deg) }

@@ -5,15 +5,15 @@
           <div class="footer-item footer-logo col-md-2 text-center">
             <div>
               <a href="/">
-                <img src="<?= get_field('field_5e331f1cdc08b') ?>" alt="<?= get_bloginfo( 'name' ) ?>">
+                <img src="<?= get_field('field_5e331f1cdc08b', 5) ?>" alt="<?= get_bloginfo( 'name' ) ?>">
               </a>
             </div>
           </div>
           <div class="footer-item col-md-8">
-            <?= get_field('field_5e331f55dc08c') ?>
+            <?= get_field('field_5e331f55dc08c', 5) ?>
           </div>
           <div class="footer-item footer-contact col-md-2">
-            <?= get_field('field_5e331f78dc08d') ?>
+            <?= get_field('field_5e331f78dc08d', 5) ?>
           </div>
         </div>
       </div>

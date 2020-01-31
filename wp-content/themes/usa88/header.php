@@ -25,7 +25,7 @@
             </button>
             <h1 style="margin: 0">
               <a class="navbar-brand" href="/">
-                <img src="<?= get_field('field_5e331dc250da3')?>" alt="<?= get_bloginfo( 'name' ) ?>">
+                <img src="<?= get_field('field_5e331dc250da3',5 )?>" alt="<?= get_bloginfo( 'name' ) ?>">
               </a>
             </h1>
           </div>

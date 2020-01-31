@@ -130,91 +130,45 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="contact-info">
+          <?php
+            $contact_info = get_field('field_5e346371fb0df');
+            foreach($contact_info as $item) {
+                $excerpt = false;
+                if( strlen($item['contact_details']) > 500) {
+                  $excerpt = true;
+                }
+          ?>
           <div class="contact-section row">
             <div class="col-md-2">
               <div class="contact-icon">
-                <img src="<?= get_template_directory_uri() ?>/assets/img/location.jpg" alt="">
+                <img src="<?= $item['contact_icon']?>" alt="">
               </div>
             </div>
             <div class="col-md-10">
-              <div class="contact-details view-more">
+              <div class="contact-details <?= ($excerpt) ? 'view-more' : ''; ?>">
                 <div class="content text-justify">
-                  <h4>OUR LOCATION</h4>
-                  <h5>MAIN OFFICE:</h5>
-                  <p>Unit 109 Columbia Ortigas Ave., Mandaluyong City, Philippines 1550</p>
-                  <h5>PLANT:</h5>
-                  <p>227 Gen. Ordonez St. Corner Balagtas St., Parang Marikina City, Philippines 1809</p>
-                  <p>T: (632) 8518 9998  F: (632) 8518 9998</p>
-                  <p>PALAWAN: Panel Compound Sampaloc Road, Brgy. Sta Monica Puerto Princesa City</p>
-                  <p>T: (048) 716 2439  M: (63) 917 1361427</p>
-                  <h5>VISAYAS</h5>
-                  <p>BACOLOD: F-5 Cgo Bldg., Luzuriaga St. Reclamation Area., Bacolod City</p>
-                  <p>T: (034) 433 2846  M: (63) 917 1301157</p>
-                  <p>CEBU: 25 Wireless Subang Dako Mandaue City Cebu</p>
-                  <p>T: (032) 261 7288  M: (63) 917 1301169</p>
-                  <p>ILOILO: Door 2 Newton Bldg. Quezon St. Iloilo City</p>
-                  <p>T: (033) 508 2361 M: (63) 917 1438392</p>
-                  <p>LEYTE: Flying V Station, Brgy. San Antonio Ormoc City, Leyte</p>
-                  <p>M: (63) 917 1361479</p>
-                  <h5>MINDANAO</h5>
-                  <p>BUTUAN: Flying V Butuan KM 3, National Highway, Baan, Butuan City</p>
-                  <p>T: (085) 815 4143  M: (63) 917 1363590</p>
-                  <p>CAGAYAN DE ORO: Petro de Oro Compound, Purok 10, Sitio Baley, Brgy. Tablon, Cagayan De Oro City</p>
-                  <p>T: (072) 700 2430  M: (63) 917 1361412</p>
-                  <p>DAVAO: Unit 22-S DEPC Warehouse, Purok 9, Brgy. Communal, Buhangin, Davao City</p>
-                  <p>T: (082) 235 1980  M: (63) 922 8893009</p>
-                  <p>GENSAN: National Highway, Dadiangas North General Santos City</p>
-                  <p>T: (083) 552 8955  M: (63) 917 1363590</p>
-                  <p><a href="http://www.usa88lubes.com" target="_blank">www.usa88lubes.com</a></p>
+                  <?= $item['contact_details']?>
                 </div>
-                <p><a href="#" class="more">View More</a></p>
+                <?= ($excerpt) ? '<p><a href="#" class="more">View More</a></p>' : ''; ?>
               </div>
             </div>
           </div>
-          <div class="contact-section row">
-            <div class="col-md-2">
-              <div class="contact-icon">
-                <img src="<?= get_template_directory_uri() ?>/assets/img/phone.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-md-10">
-              <div class="contact-details">
-                <h4>OUR NUMBER</h4>
-                <h5>MANILA OFFICE:</h5>
-                <p><a href="tel:85189998">8518-9998</a></p>
-                <h5>MARIKINA PLANT:</h5>
-                <p><a href="tel:6325189998">(632) 518 9998</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-section row">
-            <div class="col-md-2">
-              <div class="contact-icon">
-                <img src="<?= get_template_directory_uri() ?>/assets/img/mail.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-md-10">
-              <div class="contact-details">
-                <h4>OUR EMAIL</h4>
-                <p><a href="mailto:chemalloy@usa88lubes.com">chemalloy@usa88lubes.com</a></p>
-              </div>
-            </div>
-          </div>
+          <?php
+            }
+          ?>
           <div class="social-media">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            </ul>
+            <?= get_field('field_5e346418fb0e2') ?>
           </div>
         </div>
       </div>
       <div class="col-sm-7">
         <div class="contact-form-section">
-          <h2>GET IN TOUCH</h2>
-          <p class="text-justify">Here at USA88, we are looking forward to providing our customers with the best service. Contact us and we will revert promptly. The support team are ready and happy to help.</p>
+          <h2><?= get_field('field_5e3462ab03ac2') ?></h2>
+          <p class="text-justify">
+            <?= get_field('field_5e3462bc03ac3') ?>
+          </p>
           <div>
-            <?= do_shortcode('[contact-form-7 id="8" title="Contact form 1"]'); ?>
+            <?= do_shortcode(''.get_field('field_5e3462cb03ac4').''); ?>
           </div>
         </div>
       </div>
